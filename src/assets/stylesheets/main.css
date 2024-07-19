@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --ebony-clay: #222835;
+  --ebony-clay-brighter: #242938;
+
+  --reddish-orange: #F2511B;
+  --reddish-orange-brighter: #F06739;
+
+  --pattens-blue: #E5F3FF;
+  --bright-grey: #3C4350;
+
+  --color-primary: var(--ebony-clay);
+  --color-primary-brighter: var(--ebony-clay-brighter);
+
+  --color-secondary: var(--pattens-blue);
+
+  --color-accent: var(--reddish-orange);
+  --color-accent-brighter: var(--reddish-orange-brighter);
+
+  --color-neutral: var(--bright-grey);
+
+  --font-small: 14px;
+  --font-base: 16px;
+  --font-big: 30px;
+  --font-bigger: 40px;
+
+  --opacity-primary: .8;
+  --opacity-secondary: .5;
+  --opacity-tertiary: .7;
+  --opacity-quaternary: .6;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+
+  --drop-shadow: drop-shadow(0 0 0.14rem black);
+
+  --font-family: 'Lato', system-ui, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+html,
+button,
+a,
+input {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-base);
+  color: var(--color-secondary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+/* Components */
+.page-title {
+  font-size: var(--font-bigger);
+}
+
+.section-title {
+  font-size: var(--font-big);
+}
