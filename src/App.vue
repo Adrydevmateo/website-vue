@@ -15,7 +15,7 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
 
 <style>
 #app {
-  max-width: 1191px;
+  max-width: 1271px;
   margin-inline: auto;
   margin-top: 40px;
   display: flex;
@@ -24,7 +24,9 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
   gap: 80px;
 }
 
-#content {}
+#content {
+  max-width: 831px;
+}
 
 .v-enter-active,
 .v-leave-active {
@@ -39,6 +41,7 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
 @media (min-width: 1200px) {
   #app {
     flex-direction: row;
+    align-items: start;
   }
 }
 </style>

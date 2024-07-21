@@ -38,6 +38,8 @@
   --drop-shadow: drop-shadow(0 0 0.14rem black);
 
   --font-family: 'Lato', system-ui, sans-serif;
+
+  --transition-primary: .3s ease;
 }
 
 /* width */
@@ -63,6 +65,8 @@ input {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-base);
   color: var(--color-secondary);
+  text-wrap: pretty;
+  word-break: break-all;
 }
 
 html {
@@ -73,6 +77,14 @@ body {
   background-color: var(--color-primary);
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 /* Components */
 .page-title {
   font-size: var(--font-bigger);
@@ -80,4 +92,14 @@ body {
 
 .section-title {
   font-size: var(--font-big);
+}
+
+@media (min-width: 450px) {
+
+  html,
+  button,
+  a,
+  input {
+    word-break: initial;
+  }
 }

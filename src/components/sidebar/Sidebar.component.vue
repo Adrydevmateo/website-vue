@@ -64,7 +64,6 @@ import Separator from '@assets/svg/separator.svg'
 <style scoped>
 .sidebar {
   max-width: 360px;
-  max-height: 739px;
   margin-top: 50px;
 }
 
@@ -108,5 +107,13 @@ import Separator from '@assets/svg/separator.svg'
 .info-list__item__name {
   font-size: var(--font-small);
   opacity: var(--opacity-primary);
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1px;
+  }
 }
 </style>
