@@ -24,7 +24,7 @@ import Header from '@/components/header/Header.component.vue';
 
       <form class="contact-form">
         <input type="email" name="email" id="contact__email" placeholder="Email">
-        <textarea name="message" id="contact__message" placeholder="Message"></textarea>
+        <textarea name="message" id="contact__message" placeholder="Message" rows="10" maxlength="860"></textarea>
       </form>
     </div>
   </div>
@@ -84,7 +84,7 @@ import Header from '@/components/header/Header.component.vue';
 #contact__email,
 #contact__message {
   border: none;
-  padding-left: 20px;
+  padding-inline: 16px;
   background-color: var(--color-primary);
   box-shadow: var(--box-shadow);
   min-width: 0;
@@ -96,7 +96,7 @@ import Header from '@/components/header/Header.component.vue';
 }
 
 #contact__message {
-  padding-top: 12px;
+  padding-block: 12px;
   resize: none;
 }
 </style>
