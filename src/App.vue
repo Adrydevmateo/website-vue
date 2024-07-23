@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import Sidebar from '@components/sidebar/Sidebar.component.vue';
+import router from './router';
+
+router.afterEach(() => {
+  setTimeout(() => {
+    const content = document.getElementById('content')
+    if (!content) return
+    content.scrollIntoView({ behavior: 'smooth' })
+  }, 100);
+})
 </script>
 
 <template>
   <Sidebar />
 
+  <!-- TODO: try bringing the header here -->
   <router-view v-slot="{ Component }">
-    <Transition>
+    <Transition name="bounce">
       <component id="content" :is="Component" />
     </Transition>
   </router-view>
@@ -28,14 +38,26 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
   max-width: 831px;
 }
 
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
+.bounce-enter-active {
+  animation: bounce-in 0.3s;
 }
 
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
+.bounce-leave-active {
+  display: none;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (min-width: 1200px) {

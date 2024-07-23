@@ -5,12 +5,12 @@
   --ebony-clay-brighter: #242938;
 
   --reddish-orange: #F2511B;
-  --reddish-orange-opacity-60: rgba(242, 81, 27, .6);
+  --reddish-orange-muted: rgba(242, 81, 27, .6);
   --reddish-orange-brighter: #F06739;
 
-  /* Change this to rgba and reuse it */
   --pattens-blue: #E5F3FF;
-  --pattens-blue-opacity-80: rgba(229, 243, 255, .8);
+  --pattens-blue-muted: rgba(229, 243, 255, .8);
+
   --bright-grey: #3C4350;
 
   --black: rgba(0, 0, 0, .4);
@@ -19,8 +19,10 @@
   --color-primary-brighter: var(--ebony-clay-brighter);
 
   --color-secondary: var(--pattens-blue);
+  --color-secondary-muted: var(--pattens-blue-muted);
 
   --color-accent: var(--reddish-orange);
+  --color-accent-muted: var(--reddish-orange-muted);
   --color-accent-brighter: var(--reddish-orange-brighter);
 
   --color-neutral: var(--bright-grey);
@@ -66,7 +68,8 @@
 html,
 button,
 a,
-input {
+input,
+textarea {
   font-family: var(--font-family);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-base);
