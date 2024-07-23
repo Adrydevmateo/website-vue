@@ -3,7 +3,7 @@ import Header from '@/components/header/Header.component.vue';
 
 const handleSubmit = (e: Event) => {
   const formData = new FormData(e.target as HTMLFormElement)
-  const honey = formData.get('honey')
+  const honey = formData.get('_honey')
 
   if (honey) throw new Error('Bot detected!')
 
@@ -49,7 +49,8 @@ const handleSubmit = (e: Event) => {
 
       <form class="contact-form" netlify @submit.prevent="handleSubmit">
         <div class="contact-form__content">
-          <input type="text" name="honey" style="display: none;">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
           <input type="email" name="email" id="contact__email" placeholder="Email" autocomplete="off">
           <textarea name="message" id="contact__message" placeholder="Message" rows="10" maxlength="750"></textarea>
         </div>
