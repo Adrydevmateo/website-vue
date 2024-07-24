@@ -65,6 +65,7 @@ import Separator from '@assets/svg/separator.svg'
 .sidebar {
   max-width: 360px;
   margin-top: 50px;
+  padding-left: 10px;
 }
 
 .sidebar__title,

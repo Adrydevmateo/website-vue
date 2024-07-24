@@ -1,15 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import Sidebar from '@components/sidebar/Sidebar.component.vue';
-import router from './router';
-
-router.afterEach(() => {
-  setTimeout(() => {
-    const content = document.getElementById('content')
-    if (!content) return
-    content.scrollIntoView({ behavior: 'smooth' })
-  }, 100);
-})
 </script>
 
 <template>
