@@ -4,7 +4,7 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
 </script>
 
 <template>
-  <Sidebar />
+  <Sidebar id="app-sidebar" />
 
   <!-- TODO: try bringing the header here -->
   <router-view v-slot="{ Component }">
@@ -18,11 +18,14 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
 #app {
   max-width: 1271px;
   margin-inline: auto;
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 80px;
+}
+
+#app-sidebar {
+  display: none;
 }
 
 #content {
@@ -53,8 +56,18 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
 
 @media (min-width: 1200px) {
   #app {
+    margin-top: 40px;
     flex-direction: row;
     align-items: start;
   }
+
+  #content {
+    margin-top: 20px;
+  }
+
+  #app-sidebar {
+    display: initial;
+  }
+
 }
 </style>

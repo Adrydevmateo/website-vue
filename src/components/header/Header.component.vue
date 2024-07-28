@@ -14,7 +14,8 @@ defineProps<{
       <img :src="Separator" alt="separator image">
     </div>
     <nav class="header__nav">
-      <RouterLink class="nav__link" to="/">About</RouterLink>
+      <RouterLink class="nav__link" to="/">Home</RouterLink>
+      <RouterLink class="nav__link" to="/about">About</RouterLink>
       <RouterLink class="nav__link" to="/resume">Resume</RouterLink>
       <RouterLink class="nav__link" to="/portfolio">Portfolio</RouterLink>
       <RouterLink class="nav__link" to="/contact">Contact</RouterLink>
