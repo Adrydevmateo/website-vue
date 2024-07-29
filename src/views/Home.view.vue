@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ContactFormComponent from '@/components/contact/ContactForm.component.vue';
 import Header from '@components/header/Header.component.vue';
 import Sidebar from '@components/sidebar/Sidebar.component.vue';
 import { RouterLink } from 'vue-router';
@@ -26,10 +27,13 @@ import { RouterLink } from 'vue-router';
             trends in <strong>Front-End Development</strong>. Let's collaborate and bring your vision to life!
           </p>
         </div>
-        <RouterLink class="btn-learn-more" to="/">Learn More</RouterLink>
+        <RouterLink class="btn-learn-more" to="/about">Learn More</RouterLink>
       </section>
       <section class="home__section portfolio__section"> </section>
-      <section class="home__section contact__section"> </section>
+      <section class="home__section contact__section">
+        <h2 class="section-title">Contact Me</h2>
+        <ContactFormComponent />
+      </section>
     </div>
   </div>
 </template>
@@ -39,8 +43,9 @@ import { RouterLink } from 'vue-router';
   padding: 30px;
 }
 
-.home__section {
-  margin-top: 103px;
+.home__section,
+.hero__section {
+  margin-bottom: 103px;
 }
 
 .about__content strong {
@@ -55,6 +60,10 @@ import { RouterLink } from 'vue-router';
 
 .about__content p:last-child {
   margin-bottom: 50px
+}
+
+.contact__section .section-title {
+  margin-bottom: -6px;
 }
 
 .btn-learn-more {

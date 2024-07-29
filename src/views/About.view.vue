@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import Header from '@/components/header/Header.component.vue';
-
-defineProps<{
-  short: boolean
-}>();
 </script>
 
 <template>
