@@ -96,8 +96,8 @@ defineProps<{
 }
 
 .sidebar-flow-row .info-list {
-  display: grid;
-  grid-template-columns: repeat(2, 235px);
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 40px;
   margin-top: 50px;
@@ -136,6 +136,14 @@ defineProps<{
 .info-list__item__name {
   font-size: var(--font-small);
   opacity: var(--opacity-primary);
+}
+
+@media (min-width: 570px) {
+  .sidebar-flow-row .info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 235px);
+  }
+
 }
 
 @media (min-width: 1200px) {
