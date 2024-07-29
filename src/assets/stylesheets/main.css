@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
   --ebony-clay: #222835;
   --ebony-clay-brighter: #242938;
 
-  --reddish-orange: #F2511B;
-  --reddish-orange-muted: rgba(242, 81, 27, .6);
-  --reddish-orange-brighter: #F06739;
+  --reddish-orange: #f2511b;
+  --reddish-orange-muted: rgba(242, 81, 27, 0.6);
+  --reddish-orange-brighter: #f06739;
 
-  --pattens-blue: #E5F3FF;
-  --pattens-blue-muted: rgba(229, 243, 255, .8);
+  --pattens-blue: #e5f3ff;
+  --pattens-blue-muted: rgba(229, 243, 255, 0.8);
 
-  --bright-grey: #3C4350;
+  --bright-grey: #3c4350;
 
-  --black: rgba(0, 0, 0, .4);
+  --black: rgba(0, 0, 0, 0.4);
 
   --color-primary: var(--ebony-clay);
   --color-primary-brighter: var(--ebony-clay-brighter);
@@ -32,10 +32,10 @@
   --font-big: 30px;
   --font-bigger: 40px;
 
-  --opacity-primary: .8;
-  --opacity-secondary: .5;
-  --opacity-tertiary: .7;
-  --opacity-quaternary: .6;
+  --opacity-primary: 0.8;
+  --opacity-secondary: 0.5;
+  --opacity-tertiary: 0.7;
+  --opacity-quaternary: 0.6;
 
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;
@@ -45,9 +45,9 @@
   --drop-shadow: drop-shadow(0 0 0.14rem var(--black));
   --box-shadow: 0 3px 4px var(--black);
 
-  --font-family: 'Lato', system-ui, sans-serif;
+  --font-family: "Lato", system-ui, sans-serif;
 
-  --transition-primary: .3s ease;
+  --transition-primary: 0.3s ease;
 }
 
 /* width */
@@ -97,6 +97,7 @@ img {
 /* Components */
 .page-title {
   font-size: var(--font-bigger);
+  font-weight: bold;
 }
 
 .section-title {

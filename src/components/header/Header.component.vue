@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <header class="header">
     <div class="header__title-wrapper">
-      <h1 class="header__title page-title">{{ pageTitle }}</h1>
+      <p class="header__title page-title">{{ pageTitle }}</p>
       <img :src="Separator" alt="separator image">
     </div>
     <nav class="header__nav">

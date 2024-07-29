@@ -4,9 +4,8 @@ import Sidebar from '@components/sidebar/Sidebar.component.vue';
 </script>
 
 <template>
-  <Sidebar id="app-sidebar" />
+  <Sidebar id="app-sidebar" list-flow="column" />
 
-  <!-- TODO: try bringing the header here -->
   <router-view v-slot="{ Component }">
     <Transition name="bounce">
       <component id="content" :is="Component" />

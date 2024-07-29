@@ -4,14 +4,18 @@ import IconLinkedIn from '@assets/svg/MingcuteLinkedinFill.svg'
 import IconPhone from '@assets/svg/MaterialSymbolsPhoneIphone.svg'
 import IconCountry from '@assets/svg/MdiHomeCity.svg'
 import Separator from '@assets/svg/separator.svg'
+
+defineProps<{
+  listFlow: 'column' | 'row'
+}>();
 </script>
 
 <template>
-  <div class="sidebar">
-    <h1 class="sidebar__title">Adry <br> Mateo Ramon</h1>
+  <div class="sidebar" :class="`sidebar-flow-${listFlow}`">
+    <h1 class="sidebar__title">Adry <br :hidden="listFlow === 'row'"> Mateo Ramon</h1>
     <p class="sidebar__subtitle">Front-End Developer</p>
 
-    <img :src="Separator" alt="separator image">
+    <img class="sidebar__separator" :src="Separator" alt="separator image" :hidden="listFlow === 'row'" />
 
     <div class="info-list">
       <!-- Email -->
@@ -63,9 +67,12 @@ import Separator from '@assets/svg/separator.svg'
 
 <style scoped>
 .sidebar {
-  max-width: 360px;
   margin-top: 50px;
   padding-left: 10px;
+}
+
+.sidebar-flow-column {
+  max-width: 360px;
 }
 
 .sidebar__title,
@@ -88,11 +95,32 @@ import Separator from '@assets/svg/separator.svg'
   margin-top: -24px;
 }
 
+.sidebar-flow-row .info-list {
+  display: grid;
+  grid-template-columns: repeat(2, 235px);
+  column-gap: 20px;
+  row-gap: 40px;
+  margin-top: 50px;
+}
+
 .info-list__item {
   display: grid;
   grid-template-columns: 40px 1fr;
   gap: 4px;
+}
+
+.sidebar-flow-column .info-list__item {
   margin-block: 54px;
+}
+
+.sidebar-flow-row .info-list__item:nth-last-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.sidebar-flow-row .info-list__item:last-child {
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 
 .info-list__item__icon-wrapper {
