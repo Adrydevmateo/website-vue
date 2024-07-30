@@ -35,7 +35,7 @@ defineProps<{
   column-gap: 100px;
   row-gap: 50px;
   background-color: var(--color-primary);
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .header__title {
@@ -71,6 +71,12 @@ defineProps<{
 @media (hover: hover) {
   .nav__link:hover {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: 30px;
   }
 }
 </style>
