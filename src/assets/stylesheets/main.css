@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   --ebony-clay: #222835;
@@ -45,7 +45,7 @@
   --drop-shadow: drop-shadow(0 0 0.14rem var(--black));
   --box-shadow: 0 3px 4px var(--black);
 
-  --font-family: "Lato", system-ui, sans-serif;
+  --font-family: "Inter", system-ui, sans-serif;
 
   --transition-primary: 0.3s ease;
 }
@@ -71,6 +71,7 @@ a,
 input,
 textarea {
   font-family: var(--font-family);
+  font-optical-sizing: auto;
   font-weight: var(--font-weight-medium);
   font-size: var(--font-base);
   color: var(--color-secondary);
