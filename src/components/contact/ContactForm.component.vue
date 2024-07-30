@@ -1,12 +1,15 @@
 <script setup lang="ts">
 const handleSubmit = (e: Event) => {
-  const formData = new FormData(e.target as HTMLFormElement)
+  const form = e.target as HTMLFormElement
+  const formData = new FormData(form)
   const honey = formData.get('_honey')
 
   if (honey) throw new Error('Bot detected!')
 
   const email = formData.get('email')
   const message = formData.get('message')
+
+  form.reset()
 
   fetch('https://formsubmit.co/ajax/adrydevmateo@gmail.com', {
     method: 'POST',
